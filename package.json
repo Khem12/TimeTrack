@@ -1,0 +1,79 @@
+{
+  "name": "tomato-hours",
+  "version": "1.4.6",
+  "private": true,
+  "homepage": "https://tomato-hours.joglr.dev/",
+  "author": {
+    "name": "Jonas Røssum",
+    "url": "https://joglr.dev",
+    "email": "jonas.g.roessum@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/joglr/tomato-hours.git"
+  },
+  "engines": {
+    "node": "12.x"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "rimraf build && react-scripts build && npm run icon",
+    "serve-build": "npm run build && npx serve build",
+    "test": "cross-env CI=true react-scripts test --env=jsdom --verbose",
+    "test-watch": "react-scripts test --env=jsdom --verbose",
+    "coverage": "react-scripts test --env=jsdom --coverage",
+    "eject": "react-scripts eject",
+    "icon": "real-favicon generate ./graphics/faviconDescription.json ./graphics/faviconData.json ./build && real-favicon inject ./graphics/faviconData.json ./build ./build/index.html",
+    "check-icon-update": "real-favicon check-for-update --fail-on-update ./graphics/faviconData.json"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.1.1",
+    "@emotion/styled": "^11.0.0",
+    "@material-ui/core": "^5.0.0-alpha.17",
+    "@material-ui/icons": "^5.0.0-alpha.15",
+    "@material-ui/styles": "^5.0.0-alpha.15",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "@types/jest": "^26.0.15",
+    "@types/node": "^12.0.0",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@types/react-redux": "^7.1.11",
+    "cli-real-favicon": "0.0.8",
+    "cross-env": "^7.0.2",
+    "lodash.debounce": "^4.0.8",
+    "moment": "^2.29.1",
+    "prop-types": "^15.7.2",
+    "raven-js": "^3.27.2",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-ga": "^3.2.1",
+    "react-redux": "^7.2.2",
+    "react-scripts": "^4.0.1",
+    "redux": "^4.0.5",
+    "redux-timer-middleware": "^1.0.0",
+    "rimraf": "^3.0.2",
+    "roboto-fontface": "^0.10.0",
+    "typescript": "^4.0.3",
+    "web-vitals": "^0.2.4",
+    "workbox-background-sync": "^5.1.3",
+    "workbox-broadcast-update": "^5.1.3",
+    "workbox-cacheable-response": "^5.1.3",
+    "workbox-core": "^5.1.3",
+    "workbox-expiration": "^5.1.3",
+    "workbox-google-analytics": "^5.1.3",
+    "workbox-navigation-preload": "^5.1.3",
+    "workbox-precaching": "^5.1.3",
+    "workbox-range-requests": "^5.1.3",
+    "workbox-routing": "^5.1.3",
+    "workbox-strategies": "^5.1.3",
+    "workbox-streams": "^5.1.3"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}
