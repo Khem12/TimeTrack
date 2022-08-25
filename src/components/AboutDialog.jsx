@@ -19,7 +19,7 @@ let AboutDialog = ({
     onClose={onAboutDialogClose}
     aria-labelledby="about-dialog-title">
     <DialogTitle id="aboutdialog-title">
-      About Tomato Hours
+      About TimeTrack
     </DialogTitle>
     <List dense={true}>
       <ListItem>
